@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/KursovaZakatov/static/css/main.7acaea2f.css",
+    "main.js": "/KursovaZakatov/static/js/main.e70cfd8e.js",
+    "index.html": "/KursovaZakatov/index.html",
+    "main.7acaea2f.css.map": "/KursovaZakatov/static/css/main.7acaea2f.css.map",
+    "main.e70cfd8e.js.map": "/KursovaZakatov/static/js/main.e70cfd8e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.e70cfd8e.js"
+  ]
+}
