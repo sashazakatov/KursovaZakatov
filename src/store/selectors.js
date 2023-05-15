@@ -1,0 +1,1 @@
+export const getBaseJobs = (state) => state.baseJobs;
