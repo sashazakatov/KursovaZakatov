@@ -23,7 +23,7 @@ export class Employer{
         this.#companyName = newCompanyName;
     }
     get companyName(){
-        this.#companyName;
+        return this.#companyName;
     }
     set address(newAddress){
         this.#address = newAddress;
