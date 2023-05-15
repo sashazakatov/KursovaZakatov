@@ -6,6 +6,7 @@ const SharedLayout = () =>{
     return(
         <>
             <header>
+                <NavLink to={'/'}>Logo</NavLink>
                 <nav>
                     <NavLink to={'/BaseJob'}>BaseJob</NavLink>
                     <NavLink to={'/BaseUnemployed'}>BaseUnemployed</NavLink>
