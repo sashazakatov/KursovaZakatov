@@ -16,9 +16,9 @@ export class Unemployed extends Person{
         education, 
         reasonsForDismissal}){
             super({ name, age, sity, phoneNumder, email });
-            this.__profession = profession;
-            this.__education = education;
-            this.__reasonsForDismissal = reasonsForDismissal;
+            this.#profession = profession;
+            this.#education = education;
+            this.#reasonsForDismissal = reasonsForDismissal;
     }
 
     getInfo(){

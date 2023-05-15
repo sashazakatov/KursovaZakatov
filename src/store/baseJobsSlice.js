@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 import { BaseJob } from "Api/BaseJob"
 import { Job } from "Api/Job";
 
