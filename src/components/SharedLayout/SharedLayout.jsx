@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 const SharedLayout = () =>{
+    const [ openModal, setOpenModal ] = useState(false);
     return(
         <>
             <header>

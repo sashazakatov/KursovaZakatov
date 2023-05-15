@@ -1,0 +1,33 @@
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1200;
+}
+  
+.Modal {
+    position: absolute;
+    width: 450px;
+    height: 609px;
+    padding: 10px 15px;
+    background-color: white;
+}
+.closeButton{
+    position: absolute;
+    border-radius: 50%;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
