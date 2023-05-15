@@ -9,7 +9,7 @@ const baseJobs = new BaseJob([job.getInfo(), job2.getInfo()]);
 
 const baseJobsSlice = createSlice({
     name: 'baseJobs',
-    initialState: baseJobs.jobs,
+    initialState: JSON.parse(localStorage.getItem('baseJobs')) ?? baseJobs.jobs,
     reducers:{
         addItem(state, actions){
             return baseJobs.addItem(actions.payload).jobs;

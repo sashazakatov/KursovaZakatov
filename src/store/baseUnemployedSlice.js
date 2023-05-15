@@ -19,7 +19,7 @@ const baseUnemployed = new BaseUnemployed([unemployed.getInfo()]);
 
 const baseUnemployedSlice = createSlice({
     name: 'baseUnemployed',
-    initialState: baseUnemployed.unemployed,
+    initialState: JSON.parse(localStorage.getItem('baseUnemployed')) ?? baseUnemployed.unemployed,
     reducers:{
         addItem(state, action){
             return BaseUnemployed.addItem(action.payload);
