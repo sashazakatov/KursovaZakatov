@@ -30,5 +30,6 @@ const baseUnemployedSlice = createSlice({
     }
 })
 
+
 export const { addItem, removeItem } = baseUnemployedSlice.actions;
 export const baseUnemployedReduce = baseUnemployedSlice.reducer;
