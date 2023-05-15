@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const modaleRoot = document.querySelector('#modal-root')
 
-const Modal = ({onClose, largeImageURL, tag}) => { 
+const Modal = ({onClose, children}) => { 
     const handleKeydown = e => {
         if (e.code === 'Escape') {
           onClose(false);
@@ -31,7 +31,7 @@ const Modal = ({onClose, largeImageURL, tag}) => {
                 >
                     <AiOutlineClose/>
                 </button>
-                <p>Text</p>
+                { children }
             </div>
         </div>,
         modaleRoot)
