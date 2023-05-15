@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import css from './Modal.module.css'
 import { AiOutlineClose } from "react-icons/ai";
 

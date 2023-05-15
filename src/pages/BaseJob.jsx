@@ -1,7 +1,9 @@
+import BaseJobList from 'components/BaseJobList'
+
 const BaseJob = () =>{
     return(
         <>
-            <p>This is a BaseJob</p>
+            <BaseJobList/>
         </>
     )
 }

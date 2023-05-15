@@ -1,3 +1,5 @@
+import { nanoid } from 'nanoid'
+
 export class Job{
 // private
     #id
@@ -47,7 +49,7 @@ export class Job{
             id: this.#id,
             title: this.#title,
             description: this.#description,
-            saLary: this.#saLary,
+            salary: this.#salary,
             employer: this.#employer,
         }
     }
