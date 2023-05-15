@@ -13,8 +13,6 @@ const unemployed = new Unemployed({
     reasonsForDismissal: 'ffff'
 });
 
-console.log(unemployed.getInfo());
-
 const baseUnemployed = new BaseUnemployed([unemployed.getInfo()]);
 
 const baseUnemployedSlice = createSlice({

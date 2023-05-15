@@ -11,7 +11,7 @@ const BaseJobList = () =>{
     return(
         <ul>
         { jobs
-            .filter(({ title }) => title.toLowerCase().includes(filter.toLowerCase()))
+            .filter(({title}) => title.toLowerCase().includes(filter.toLowerCase()))
             .map(({id, title}) =>
                 <li key={id}>
                     <p>{title}</p>

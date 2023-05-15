@@ -3,18 +3,22 @@ import { createPortal } from 'react-dom'
 // import PropTypes from "prop-types";
 import css from './Modal.module.css'
 import { AiOutlineClose } from "react-icons/ai";
+import { useDispatch } from 'react-redux';
+import { toggle } from 'store/openModalSlice'
 
 const modaleRoot = document.querySelector('#modal-root')
 
-const Modal = ({onClose, children}) => { 
+const Modal = ({ children }) => {
+    const dispatch = useDispatch()
+
     const handleKeydown = e => {
         if (e.code === 'Escape') {
-          onClose(false);
+            dispatch(toggle(false));
         }
     };
     const handleBackdropClick = e => {
         if (e.currentTarget === e.target) {
-          onClose(false);
+            dispatch(toggle(false));
         }
     };
     useEffect(()=>{
@@ -27,7 +31,7 @@ const Modal = ({onClose, children}) => {
             <div className={css.Modal}>
                 <button
                     className={css.closeButton}
-                    onClick={() => onClose(false)}
+                    onClick={() => dispatch(toggle(false))}
                 >
                     <AiOutlineClose/>
                 </button>
@@ -36,11 +40,5 @@ const Modal = ({onClose, children}) => {
         </div>,
         modaleRoot)
 }
-
-// Modal.propTypes = {
-//     onClose: PropTypes.func.isRequired,
-//     largeImageURL: PropTypes.string.isRequired, 
-//     tag: PropTypes.string.isRequired,
-// }
 
 export default Modal;
