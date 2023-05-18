@@ -8,6 +8,8 @@ import { AiFillEye } from 'react-icons/ai';
 import myPhoto from 'images/placeholderForProfile.jpg';
 import { useEffect } from "react";
 
+import { List, Item, Div } from './BaseJobList.styled' 
+
 const BaseJobList = () =>{
     const location = useLocation();
     const jobs = useSelector(getBaseJobs);
@@ -20,26 +22,28 @@ const BaseJobList = () =>{
     }, [jobs])
 
     return(
-        <ul>
+        <List>
         { jobs
             .filter(({title}) => title.toLowerCase().includes(filter.toLowerCase()))
             .map(({id, title}) =>
-                <li key={id}>
+                <Item key={id}>
                     <img
                         width='125' 
                         src={myPhoto}
                         alt=''
                     />
-                    <p>{title}</p>
-                    <NavLink to={`/BaseJob/${id}`} state={{form: location}}>
-                        <AiFillEye />
-                    </NavLink>
-                    <button onClick={() => dispatch(removeItem(id))}>
-                        <ImBin/>
-                    </button>
-                </li>
+                    <h2>{title}</h2>
+                    <Div>
+                        <NavLink to={`/BaseJob/${id}`} state={{form: location}}>
+                            <AiFillEye />
+                        </NavLink>
+                        <button onClick={() => dispatch(removeItem(id))}>
+                            <ImBin/>
+                        </button>
+                    </Div>
+                </Item>
         )}
-        </ul>
+        </List>
     )
 }
 

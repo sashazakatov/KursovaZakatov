@@ -17,7 +17,6 @@ const BaseUnemployed = () => {
                 <button onClick={() => dispatch(toggle(true))}> add unemployed</button>
                 { isOpenModal && <UnemployedForm/>}
             </div>
-            <p>this is a BaseUnemployed</p>
             <BaseUnemployedList/>
         </>
     )

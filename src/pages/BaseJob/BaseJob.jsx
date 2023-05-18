@@ -6,17 +6,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggle } from 'store/openModalSlice'; 
 import { getOpenModal } from 'store/selectors'
 
+import { Div, Button } from './BaseJob.styled';
+
 const BaseJob = () =>{
     const dispatch = useDispatch()
     const isOpenModal = useSelector(getOpenModal);
 
     return(
         <>
-            <div>
+            <Div>
                 <Filter/>
-                <button onClick={() => dispatch(toggle(true))}> add job</button>
+                <Button onClick={() => dispatch(toggle(true))}> add job</Button>
                 { isOpenModal && <JobForm />}
-            </div>
+            </Div>
             <BaseJobList/>
         </>
     )

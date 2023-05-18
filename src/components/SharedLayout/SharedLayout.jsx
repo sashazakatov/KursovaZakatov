@@ -1,18 +1,19 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { Header, Nav, Link, Main } from './SharedLayout.styled';
 
 const SharedLayout = () =>{
     return(
         <>
-            <header>
-                <NavLink to={'/'}>Logo</NavLink>
-                <nav>
-                    <NavLink to={'/BaseJob'}>BaseJob</NavLink>
-                    <NavLink to={'/BaseUnemployed'}>BaseUnemployed</NavLink>
-                </nav>
-            </header>
-            <main>
+            <Header>
+                <NavLink to={'/'}>💻 Logo</NavLink>
+                <Nav>
+                    <Link to={'/BaseJob'}>Base job</Link>
+                    <Link to={'/BaseUnemployed'}>Base unemployed</Link>
+                </Nav>
+            </Header>
+            <Main>
                 <Outlet/>
-            </main>
+            </Main>
         </>
     )
 
