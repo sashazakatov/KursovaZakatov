@@ -12,7 +12,6 @@ const baseJobsSlice = createSlice({
     initialState: JSON.parse(localStorage.getItem('baseJobs')) ?? baseJobs.jobs,
     reducers:{
         addItem(state, actions){
-            console.log(actions.payload);
             return baseJobs.addItem(actions.payload);
         },
         removeItem(state, actions){

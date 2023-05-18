@@ -7,7 +7,7 @@ import { ImBin } from 'react-icons/im';
 const BaseJobList = () =>{
     const jobs = useSelector(getBaseJobs);
 
-    console.log(jobs);
+    console.log(jobs);  
 
     const filter = useSelector(getFilter)
     const dispatch = useDispatch();

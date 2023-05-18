@@ -20,6 +20,8 @@ const JobForm = () => {
         });
 
         dispatch(addItem(newJob.getInfo()));
+
+        form.reset();
     }
 
     return(
