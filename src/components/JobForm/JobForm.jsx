@@ -1,7 +1,7 @@
-import Modal from "components/Modal/Modal";
-import { useState } from "react";
-import { Job } from 'Api/Job'
 import { useDispatch } from "react-redux";
+
+import Modal from "components/Modal/Modal";
+import { Job } from 'Api/Job'
 import { addItem } from "store/baseJobsSlice";
 
 const JobForm = () => {
