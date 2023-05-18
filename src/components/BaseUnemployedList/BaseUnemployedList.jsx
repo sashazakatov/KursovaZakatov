@@ -25,7 +25,7 @@ const BaseUnemployedList = () => {
             .map(({id, name }) => 
             <li key={id}>
                 <p>{ name }</p>
-                <NavLink to={`/BaseJob/${id}`} state={{form: location}}>
+                <NavLink to={`/BaseUnemployed/${id}`} state={{form: location}}>
                     <AiFillEye />
                 </NavLink>
                 <button

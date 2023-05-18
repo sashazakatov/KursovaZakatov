@@ -4,7 +4,7 @@ import Home from "pages/Home";
 import BaseJob from "pages/BaseJob";
 import BaseUnemployed from "pages/BaseUnemployed";
 import JodDetails from 'pages/JodDetails'
-import Unemployed from "pages/Unemployed";
+import UnemployedDetails from "pages/UnemployedDetails";
 
 export const App = () => {
   return (
@@ -14,7 +14,7 @@ export const App = () => {
         <Route path='BaseJob' element={<BaseJob/>}></Route>
         <Route path='BaseUnemployed' element={<BaseUnemployed/>} />
         <Route path='BaseJob/:jobId' element={<JodDetails/>}/>
-        <Route path='BaseUnemployed/:unemployedId' element={<Unemployed/>}/>
+        <Route path='BaseUnemployed/:unemployedId' element={<UnemployedDetails/>}/>
       </Route>
 
       <Route path={'*'} element={<Navigate to={'/'}/>}/>

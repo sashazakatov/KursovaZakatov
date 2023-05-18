@@ -12,7 +12,7 @@ const BaseJobList = () =>{
     const location = useLocation();
     const jobs = useSelector(getBaseJobs);
 
-    const filter = useSelector(getFilter)
+    const filter = useSelector(getFilter);
     const dispatch = useDispatch();
 
     useEffect(() => {
