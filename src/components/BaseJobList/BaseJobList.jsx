@@ -17,7 +17,7 @@ const BaseJobList = () =>{
 
     useEffect(() => {
         localStorage.setItem('jobs', JSON.stringify(jobs));
-    })
+    }, [jobs])
 
     return(
         <ul>

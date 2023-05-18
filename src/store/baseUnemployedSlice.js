@@ -1,19 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { BaseUnemployed } from "Api/BaseUnemployed";
-import { Unemployed } from 'Api/Unemployed'
 
-const unemployed = new Unemployed({
-    name: 'ffff', 
-    age: 10, 
-    sity: 'ffff', 
-    phoneNumder: 'ffff', 
-    email: 'ffff', 
-    profession: 'ffff', 
-    education: 'ffff', 
-    reasonsForDismissal: 'ffff'
-});
-
-const baseUnemployed = new BaseUnemployed([unemployed.getInfo()]);
+const baseUnemployed = new BaseUnemployed( JSON.parse(localStorage.getItem('unemployed')) ?? []);
 
 const baseUnemployedSlice = createSlice({
     name: 'baseUnemployed',

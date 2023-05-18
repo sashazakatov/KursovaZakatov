@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { BaseJob } from "Api/BaseJob"
-import { Job } from "Api/Job";
+// import { Job } from "Api/Job";
 
 // const job = new Job({title: 'ffff', description: 'ffff', salary: 1, employer: 'ffff'});
 // const job2 = new Job({title: 'aaaa', description: 'aaaa', salary: 1, employer: 'aaaa'})
