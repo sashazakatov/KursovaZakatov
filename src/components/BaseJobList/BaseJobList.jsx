@@ -8,7 +8,7 @@ import { AiFillEye } from 'react-icons/ai';
 import myPhoto from 'images/placeholderForProfile.jpg';
 import { useEffect } from "react";
 
-import { List, Item, Div } from './BaseJobList.styled' 
+import { List, Item, Div, Button } from './BaseJobList.styled' 
 
 const BaseJobList = () =>{
     const location = useLocation();
@@ -37,9 +37,9 @@ const BaseJobList = () =>{
                         <NavLink to={`/BaseJob/${id}`} state={{form: location}}>
                             <AiFillEye />
                         </NavLink>
-                        <button onClick={() => dispatch(removeItem(id))}>
+                        <Button onClick={() => dispatch(removeItem(id))}>
                             <ImBin/>
-                        </button>
+                        </Button>
                     </Div>
                 </Item>
         )}

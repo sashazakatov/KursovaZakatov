@@ -22,3 +22,17 @@ export const Div = styled.div`
     flex-direction: column;
     justify-content: space-around;
 `
+
+export const Button = styled.button`
+    padding: 8px 16px;  
+    border-radius: 4px;
+    color: black;
+    font-weight: 500;
+    border: none;
+    background-color: #F0F0F0;
+
+    &:hover{
+        color: white;
+        background-color: #ff652d;
+    }
+`;

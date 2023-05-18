@@ -4,6 +4,9 @@ import Modal from "components/Modal/Modal";
 import { Job } from 'Api/Job'
 import { addItem } from "store/baseJobsSlice";
 
+
+import { Form, Label, Text, Input, Textarea, Submit } from './JobForm.styled'
+
 const JobForm = () => {
     const dispatch = useDispatch();
 
@@ -26,38 +29,43 @@ const JobForm = () => {
 
     return(
         <Modal>
-            <form onSubmit={(e) => handelSubmit(e)}>
-                <label>
-                    title
-                    <input 
+            <Form onSubmit={(e) => handelSubmit(e)}>
+                <Label>
+                    <Text>title</Text>
+                    <Input
                         type='text'
                         name='title'
+                        required
                     />
-                </label>
-                <label>
-                    salary
-                    <input
+                </Label>
+                <Label>
+                    <Text>salary</Text>
+                    <Input
                         type='number'
                         name='salary'
+                        min='0'
+                        required
                     />
-                </label>
-                <label>
-                    employer
-                    <input
+                </Label>
+                <Label>
+                    <Text>employer</Text>
+                    <Input
                         type = 'text'
                         name = 'employer'
+                        required
                     />
-                </label>
-                <label>
-                    description
-                    <textarea 
+                </Label>
+                <Label>
+                    <Text>description</Text>
+                    <Textarea 
                         name="description"
                         cols="30"
                         rows="10" 
+                        required
                     />
-                </label>
-                <button type='submit'>add form</button>
-            </form>
+                </Label>
+                <Submit type='submit'>add form</Submit>
+            </Form>
         </Modal>
     )
 }
