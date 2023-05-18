@@ -1,8 +1,8 @@
 import Modal from 'components/Modal';
 
-const BaseUnemployedForm = () => {
+const UnemployedForm = () => {
     return(
         <Modal/>
     )
 }
-export default BaseUnemployedForm;
+export default UnemployedForm;

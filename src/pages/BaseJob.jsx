@@ -1,6 +1,6 @@
 import BaseJobList from 'components/BaseJobList'
 import Filter from 'components/Filter';
-import BaseJobForm from 'components/BaseJobForm';
+import JobForm from 'components/JobForm';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { toggle } from 'store/openModalSlice'; 
@@ -15,7 +15,7 @@ const BaseJob = () =>{
             <div>
                 <Filter/>
                 <button onClick={() => dispatch(toggle(true))}> add job</button>
-                { isOpenModal && <BaseJobForm />}
+                { isOpenModal && <JobForm />}
             </div>
             <BaseJobList/>
         </>
