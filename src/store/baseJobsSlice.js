@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 import { BaseJob } from "Api/BaseJob"
 import { Job } from "Api/Job";
 
-const job = new Job({title: 'ffff', description: 'ffff', salary: 1, employer: 'ffff'});
-const job2 = new Job({title: 'aaaa', description: 'aaaa', salary: 1, employer: 'aaaa'})
+// const job = new Job({title: 'ffff', description: 'ffff', salary: 1, employer: 'ffff'});
+// const job2 = new Job({title: 'aaaa', description: 'aaaa', salary: 1, employer: 'aaaa'})
 
-const baseJobs = new BaseJob([job.getInfo(), job2.getInfo()]);
+const baseJobs = new BaseJob( JSON.parse(localStorage.getItem('jobs')) ?? []);
 
 const baseJobsSlice = createSlice({
     name: 'baseJobs',

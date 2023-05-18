@@ -13,6 +13,9 @@ export class BaseJob{
         this.#jobs = this.#jobs.filter((job) => job.id !== id);
         return this.#jobs;
     }
+    getJobById(id){
+        return this.#jobs.find((job) => id === job.id);
+    }
     get jobs(){
         return this.#jobs;
     }
