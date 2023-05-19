@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/KursovaZakatov/static/css/main.1704ce1f.css",
-    "main.js": "/KursovaZakatov/static/js/main.a7fc2a5f.js",
+    "main.js": "/KursovaZakatov/static/js/main.e1c2387c.js",
     "index.html": "/KursovaZakatov/index.html",
     "main.1704ce1f.css.map": "/KursovaZakatov/static/css/main.1704ce1f.css.map",
-    "main.a7fc2a5f.js.map": "/KursovaZakatov/static/js/main.a7fc2a5f.js.map"
+    "main.e1c2387c.js.map": "/KursovaZakatov/static/js/main.e1c2387c.js.map"
   },
   "entrypoints": [
     "static/css/main.1704ce1f.css",
-    "static/js/main.a7fc2a5f.js"
+    "static/js/main.e1c2387c.js"
   ]
 }
