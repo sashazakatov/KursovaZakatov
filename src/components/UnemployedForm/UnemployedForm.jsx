@@ -12,28 +12,18 @@ const UnemployedForm = () => {
         e.preventDefault();
 
         const form = e.target;
-        const {
-            name, 
-            age, 
-            phoneNumder, 
-            sity, 
-            email, 
-            profession, 
-            education, 
-            reasonsForDismissal 
-        } = form.elements;
+
         const unemployed = new Unemployed({
-            name: name.value,
-            age: age.value,
-            phoneNumder: phoneNumder.value,
-            sity: sity.value,
-            email: email.value,
-            profession: profession.value,
-            education: education.value,
-            reasonsForDismissal: reasonsForDismissal.value,
+            name: form.elements.name.value,
+            age: form.elements.age.value,
+            phoneNumder: form.elements.phoneNumder.value,
+            sity: form.elements.sity.value,
+            email: form.elements.email.value,
+            profession: form.elements.profession.value,
+            education: form.elements.education.value,
+            reasonsForDismissal: form.elements.reasonsForDismissal.value,
         })
 
-        console.log(unemployed);
         dispatch(addItem(unemployed.getInfo()))
         form.reset();
     }
@@ -46,6 +36,8 @@ const UnemployedForm = () => {
                     <Input 
                         type='text'
                         name='name'
+                        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+                        required
                     />
                 </Label>
                 <Label>
@@ -53,13 +45,19 @@ const UnemployedForm = () => {
                     <Input
                         type='number'
                         name='age'
+                        min='1'
+                        max='200'
+                        required
                     />
                 </Label>
                 <Label>
                     phone numder
                     <Input
-                        type='number'
+                        type='tel'
                         name='phoneNumder'
+                        maxLength="35"
+                        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+                        required
                     />
                 </Label>
                 <Label>
@@ -67,13 +65,15 @@ const UnemployedForm = () => {
                     <Input
                         type = 'text'
                         name = 'sity'
+                        required
                     />
                 </Label>
                 <Label>
                     email
                     <Input
-                        type = 'text'
+                        type = 'email'
                         name = 'email'
+                        required
                     />
                 </Label>
                 <Label>
@@ -81,6 +81,7 @@ const UnemployedForm = () => {
                     <Input
                         type = 'text'
                         name = 'profession'
+                        required
                     />
                 </Label>
                 <Label>
@@ -88,6 +89,7 @@ const UnemployedForm = () => {
                     <Input
                         type = 'text'
                         name = 'education'
+                        required
                     />
                 </Label>
                 <Label>
@@ -96,6 +98,7 @@ const UnemployedForm = () => {
                         name="reasonsForDismissal"
                         cols="30"
                         rows="8" 
+                        required
                     />
                 </Label>
                 <Submit type='submit'>add form</Submit>
