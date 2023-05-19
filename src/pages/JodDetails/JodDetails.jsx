@@ -23,11 +23,13 @@ const JodDetails = () => {
         <>
             <Link to={locationRef.current}>Go back</Link>
             <Div>
-                <img
-                    width='255' 
-                    src={myPhoto} 
-                    alt="" 
-                />
+                <div>
+                    <img
+                        width='255' 
+                        src={myPhoto} 
+                        alt="" 
+                    />
+                </div>
                 <div>
                     <h2>Information about job</h2>
                     <p>Title: {title}</p>

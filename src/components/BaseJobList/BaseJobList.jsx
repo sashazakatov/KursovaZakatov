@@ -8,7 +8,7 @@ import { AiFillEye } from 'react-icons/ai';
 import myPhoto from 'images/placeholderForProfile.jpg';
 import { useEffect } from "react";
 
-import { List, Item, Div, Button } from './BaseJobList.styled' 
+import { List, Item, Div, Button, InformationDiv } from './BaseJobList.styled' 
 
 const BaseJobList = () =>{
     const location = useLocation();
@@ -25,14 +25,17 @@ const BaseJobList = () =>{
         <List>
         { jobs
             .filter(({title}) => title.toLowerCase().includes(filter.toLowerCase()))
-            .map(({id, title}) =>
+            .map(({id, title, salary}) =>
                 <Item key={id}>
                     <img
                         width='125' 
                         src={myPhoto}
                         alt=''
                     />
-                    <h2>{title}</h2>
+                    <InformationDiv>
+                        <h2>{title}</h2>
+                        <p>salary: { salary }</p>
+                    </InformationDiv>
                     <Div>
                         <NavLink to={`/BaseJob/${id}`} state={{form: location}}>
                             <AiFillEye />

@@ -15,8 +15,9 @@ export const Item = styled.li`
     padding: 30px 15px;
     min-width: 470px;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
 `
+
 export const InformationDiv = styled.div`
     display: flex;
     flex-direction: column;

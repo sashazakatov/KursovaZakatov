@@ -8,6 +8,10 @@ import { ImBin } from 'react-icons/im';
 
 import { getBaseUnemployed, getFilter } from "store/selectors";
 
+import { List, Item, Div, Button, InformationDiv } from './BaseUnemployedList.styled'
+
+import myPhoto from 'images/placeholderForProfile.jpg';
+
 const BaseUnemployedList = () => {
     const location = useLocation();
     const unemployed = useSelector(getBaseUnemployed);
@@ -19,22 +23,36 @@ const BaseUnemployedList = () => {
     }, [unemployed])
 
     return(
-       <ul>
+       <List>
             { unemployed
             .filter(({name}) => name.toLowerCase().includes(filter.toLowerCase()))
-            .map(({id, name }) => 
-            <li key={id}>
-                <p>{ name }</p>
-                <NavLink to={`/BaseUnemployed/${id}`} state={{form: location}}>
-                    <AiFillEye />
-                </NavLink>
-                <button
-                    onClick={() => dispatch(removeItem(id))}
-                >
-                    <ImBin/>
-                </button>
-            </li>) }
-       </ul>
+            .map(({id, name, profession, phoneNumder, email }) => 
+            <Item key={id}>
+                <Div>
+                <img
+                        width='125' 
+                        src={myPhoto}
+                        alt=''
+                />
+                </Div>
+                <InformationDiv>
+                    <h2>{name}</h2>
+                    <p>profession: {profession}</p>
+                    <p>phone numder: {phoneNumder}</p>
+                    <p>email: {email}</p>
+                </InformationDiv>
+                <Div>
+                    <NavLink to={`/BaseUnemployed/${id}`} state={{form: location}}>
+                        <AiFillEye />
+                    </NavLink>
+                    <Button
+                        onClick={() => dispatch(removeItem(id))}
+                    >
+                        <ImBin/>
+                    </Button>
+                </Div>
+            </Item>) }
+       </List>
     )
 }
 export default BaseUnemployedList;

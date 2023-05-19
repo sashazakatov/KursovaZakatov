@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { addItem } from 'store/baseUnemployedSlice';
 import { Unemployed } from 'Api/Unemployed';
 
+import { Form, Submit, Textarea, Input, Label } from './UnemployedForm.styled'
+
 const UnemployedForm = () => {
     const dispatch = useDispatch();
 
@@ -38,66 +40,66 @@ const UnemployedForm = () => {
 
     return(
         <Modal>
-            <form onSubmit={(e) => handelSubmit(e)}>
-                <label>
+            <Form onSubmit={(e) => handelSubmit(e)}>
+                <Label>
                     name
-                    <input 
+                    <Input 
                         type='text'
                         name='name'
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     age
-                    <input
+                    <Input
                         type='number'
                         name='age'
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     phone numder
-                    <input
+                    <Input
                         type='number'
                         name='phoneNumder'
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     sity
-                    <input
+                    <Input
                         type = 'text'
                         name = 'sity'
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     email
-                    <input
+                    <Input
                         type = 'text'
                         name = 'email'
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     profession
-                    <input
+                    <Input
                         type = 'text'
                         name = 'profession'
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     education
-                    <input
+                    <Input
                         type = 'text'
                         name = 'education'
                     />
-                </label>
-                <label>
+                </Label>
+                <Label>
                     Reasons for dismissal
-                    <textarea 
+                    <Textarea 
                         name="reasonsForDismissal"
                         cols="30"
-                        rows="10" 
+                        rows="8" 
                     />
-                </label>
-                <button type='submit'>add form</button>
-            </form>
+                </Label>
+                <Submit type='submit'>add form</Submit>
+            </Form>
         </Modal>
     )
 }
