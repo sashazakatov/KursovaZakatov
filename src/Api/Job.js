@@ -8,6 +8,7 @@ export class Job{
     #salary;
     #employer;
 
+//public
     constructor({ title, description, salary, employer }){
         this.#id = nanoid();
         this.#title = title;

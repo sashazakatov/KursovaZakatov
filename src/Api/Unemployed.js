@@ -6,6 +6,7 @@ export class Unemployed extends Person{
     #education;
     #reasonsForDismissal;
 
+//public
     constructor({
         name, 
         age, 

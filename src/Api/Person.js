@@ -8,7 +8,8 @@ export class Person{
     #phoneNumder;
     #email;
     #id;
-
+    
+//public
     constructor({name, age, sity, phoneNumder, email}){
         this.#id = nanoid();
         this.#name = name;

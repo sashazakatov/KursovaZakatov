@@ -2,6 +2,7 @@ export class BaseJob{
 // private
     #jobs;
 
+//public
     constructor(jobs = []){
         this.#jobs = jobs;
     }

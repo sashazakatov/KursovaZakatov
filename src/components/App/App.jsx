@@ -16,9 +16,7 @@ export const App = () => {
         <Route path='BaseJob/:jobId' element={<JodDetails/>}/>
         <Route path='BaseUnemployed/:unemployedId' element={<UnemployedDetails/>}/>
       </Route>
-
       <Route path={'*'} element={<Navigate to={'/'}/>}/>
     </Routes>
   );
 };
-

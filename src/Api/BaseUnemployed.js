@@ -2,6 +2,7 @@ export class BaseUnemployed{
 // private
     #unemployed
 
+//public
     constructor(unemployed = []){
         this.#unemployed = unemployed;
     }
