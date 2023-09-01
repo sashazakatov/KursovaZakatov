@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const filterSlice = createSlice({
     name: 'baseUnemployed',
     initialState: '',
@@ -9,6 +8,5 @@ const filterSlice = createSlice({
         }
     }
 })
-
 export const filterReducer = filterSlice.reducer;
 export const { change } = filterSlice.actions;

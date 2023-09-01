@@ -4,9 +4,7 @@ import UnemployedForm from "components/UnemployedForm/UnemployedForm";
 import { useDispatch, useSelector } from "react-redux";
 import { toggle } from "store/openModalSlice";
 import { getOpenModal } from 'store/selectors'
-
-import { Div, Button } from './BaseUnemployed.styled'
-
+import { Div, Button } from './BaseUnemployed.styled';
 
 const BaseUnemployed = () => {
     const dispatch = useDispatch()

@@ -2,17 +2,13 @@ import { useRef } from "react";
 import { useSelector } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
 import myPhoto from 'images/placeholderForProfile.jpg';
-
 import { getBaseUnemployed } from "store/selectors";
-
-import { Div, Link } from './UnemployedDetails.styled'
+import { Div, Link } from './UnemployedDetails.styled';
 
 const UnemployedDetails = () => {
     const location = useLocation();
     const locationRef = useRef(location.state.form ?? '/');
     const { unemployedId } = useParams();
-
-
     const {
         name, 
         age, 
@@ -23,7 +19,6 @@ const UnemployedDetails = () => {
         education, 
         reasonsForDismissal, 
     } = useSelector(getBaseUnemployed).find((item) => item.id === unemployedId);
-
     return(
         <>
             <Link to={locationRef.current}>Go back</Link>

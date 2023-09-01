@@ -1,11 +1,9 @@
 import BaseJobList from 'components/BaseJobList'
 import Filter from 'components/Filter';
 import JobForm from 'components/JobForm';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { toggle } from 'store/openModalSlice'; 
 import { getOpenModal } from 'store/selectors'
-
 import { Div, Button } from './BaseJob.styled';
 
 const BaseJob = () =>{

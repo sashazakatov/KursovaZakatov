@@ -1,12 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { change } from "store/filterSlice";
-
 import { Input } from './Filter.styled'
 
 const Filter = () => {
     const dispatch = useDispatch();
-
     useEffect(() => {
         dispatch(change(''))
     }, [dispatch])

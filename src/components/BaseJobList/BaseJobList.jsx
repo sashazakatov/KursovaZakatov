@@ -2,21 +2,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeItem } from 'store/baseJobsSlice'
 import { getBaseJobs, getFilter } from 'store/selectors'
 import { NavLink, useLocation } from "react-router-dom";
-
 import { ImBin } from 'react-icons/im';
 import { AiFillEye } from 'react-icons/ai';
 import myPhoto from 'images/placeholderForProfile.jpg';
 import { useEffect } from "react";
-
 import { List, Item, Div, Button, InformationDiv } from './BaseJobList.styled' 
 
 const BaseJobList = () =>{
     const location = useLocation();
     const jobs = useSelector(getBaseJobs);
-
     const filter = useSelector(getFilter);
     const dispatch = useDispatch();
-
     useEffect(() => {
         localStorage.setItem('jobs', JSON.stringify(jobs));
     }, [jobs])
@@ -49,5 +45,4 @@ const BaseJobList = () =>{
         </List>
     )
 }
-
 export default BaseJobList;

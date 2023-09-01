@@ -1,24 +1,20 @@
 import { useRef } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import myPhoto from 'images/placeholderForProfile.jpg';
-
 import { useSelector } from 'react-redux';
-import { getBaseJobs } from 'store/selectors'
-
-import { Div, Link } from './JodDetails.styled'
+import { getBaseJobs } from 'store/selectors';
+import { Div, Link } from './JodDetails.styled';
 
 const JodDetails = () => {
     const location = useLocation();
     const locationRef = useRef(location.state.form ?? '/');
     const { jobId } = useParams();
-
     const { 
         title, 
         description, 
         salary, 
         employer 
     } = useSelector(getBaseJobs).find((item) => item.id === jobId);
-
     return(
         <>
             <Link to={locationRef.current}>Go back</Link>

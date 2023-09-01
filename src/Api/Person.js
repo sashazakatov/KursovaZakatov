@@ -8,7 +8,6 @@ export class Person{
     #phoneNumder;
     #email;
     #id;
-    
 //public
     constructor({name, age, sity, phoneNumder, email}){
         this.#id = nanoid();
@@ -18,7 +17,6 @@ export class Person{
         this.#phoneNumder = phoneNumder;
         this.#email = email;
     }
-
     get id(){
         return this.#id;
     }
@@ -52,7 +50,6 @@ export class Person{
     get email(){
         return this.#email;
     }
-
     getInfo(){
         return {
             id: this.#id,

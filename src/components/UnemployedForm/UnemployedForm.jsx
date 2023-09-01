@@ -2,17 +2,14 @@ import Modal from 'components/Modal';
 import { useDispatch } from "react-redux";
 import { addItem } from 'store/baseUnemployedSlice';
 import { Unemployed } from 'Api/Unemployed';
-
 import { Form, Submit, Textarea, Input, Label } from './UnemployedForm.styled'
 
 const UnemployedForm = () => {
     const dispatch = useDispatch();
-
     const handelSubmit = (e) => {
         e.preventDefault();
 
         const form = e.target;
-
         const unemployed = new Unemployed({
             name: form.elements.name.value,
             age: form.elements.age.value,
@@ -23,7 +20,6 @@ const UnemployedForm = () => {
             education: form.elements.education.value,
             reasonsForDismissal: form.elements.reasonsForDismissal.value,
         })
-
         dispatch(addItem(unemployed.getInfo()))
         form.reset();
     }

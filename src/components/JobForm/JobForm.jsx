@@ -1,18 +1,13 @@
 import { useDispatch } from "react-redux";
-
 import Modal from "components/Modal/Modal";
 import { Job } from 'Api/Job'
 import { addItem } from "store/baseJobsSlice";
-
-
 import { Form, Label, Text, Input, Textarea, Submit } from './JobForm.styled'
 
 const JobForm = () => {
     const dispatch = useDispatch();
-
     const handelSubmit = (e) => {
         e.preventDefault();
-
         const form = e.target;
         const { title, salary, employer, description } = form.elements;
         const newJob = new Job({
@@ -21,9 +16,7 @@ const JobForm = () => {
             employer: employer.value,
             description: description.value,
         });
-
         dispatch(addItem(newJob.getInfo()));
-
         form.reset();
     }
 

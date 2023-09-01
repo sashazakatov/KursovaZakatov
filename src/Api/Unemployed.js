@@ -5,7 +5,6 @@ export class Unemployed extends Person{
     #profession;
     #education;
     #reasonsForDismissal;
-
 //public
     constructor({
         name, 
@@ -21,7 +20,6 @@ export class Unemployed extends Person{
             this.#education = education;
             this.#reasonsForDismissal = reasonsForDismissal;
     }
-
     getInfo(){
         return{
             id: this.id,

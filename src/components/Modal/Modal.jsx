@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-// import PropTypes from "prop-types";
 import css from './Modal.module.css'
 import { AiOutlineClose } from "react-icons/ai";
 import { useDispatch } from 'react-redux';
@@ -10,7 +9,6 @@ const modaleRoot = document.querySelector('#modal-root')
 
 const Modal = ({ children }) => {
     const dispatch = useDispatch()
-
     const handleKeydown = e => {
         if (e.code === 'Escape') {
             dispatch(toggle(false));
@@ -40,5 +38,4 @@ const Modal = ({ children }) => {
         </div>,
         modaleRoot)
 }
-
 export default Modal;

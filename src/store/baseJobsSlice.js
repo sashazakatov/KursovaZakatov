@@ -1,8 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { BaseJob } from "Api/BaseJob"
-
 const baseJobs = new BaseJob( JSON.parse(localStorage.getItem('jobs')) ?? []);
-
 const baseJobsSlice = createSlice({
     name: 'baseJobs',
     initialState: JSON.parse(localStorage.getItem('baseJobs')) ?? baseJobs.jobs,
@@ -16,6 +14,5 @@ const baseJobsSlice = createSlice({
         }
     }
 })
-
 export const { addItem, removeItem } = baseJobsSlice.actions;
 export const baseJobsReducer = baseJobsSlice.reducer;

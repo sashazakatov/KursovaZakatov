@@ -7,7 +7,6 @@ export class Job{
     #description;
     #salary;
     #employer;
-
 //public
     constructor({ title, description, salary, employer }){
         this.#id = nanoid();
@@ -16,7 +15,6 @@ export class Job{
         this.#salary = salary;
         this.#employer = employer; 
     }
-
     get id(){
         return this.#id;
     }
@@ -44,7 +42,6 @@ export class Job{
     get employer(){
         return this.#employer;
     }
-
     getInfo(){
         return{
             id: this.#id,

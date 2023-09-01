@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const openModalSlice = createSlice({
     name: 'openModal',
     initialState: false,
@@ -9,6 +8,5 @@ const openModalSlice = createSlice({
         }
     }
 })
-
 export const { toggle } = openModalSlice.actions;
 export const openModalReduser = openModalSlice.reducer;

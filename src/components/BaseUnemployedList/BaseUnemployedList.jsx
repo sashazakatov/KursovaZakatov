@@ -2,14 +2,10 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem } from 'store/baseUnemployedSlice';
 import { NavLink, useLocation } from "react-router-dom";
-
 import { AiFillEye } from 'react-icons/ai';
 import { ImBin } from 'react-icons/im';
-
 import { getBaseUnemployed, getFilter } from "store/selectors";
-
 import { List, Item, Div, Button, InformationDiv } from './BaseUnemployedList.styled'
-
 import myPhoto from 'images/placeholderForProfile.jpg';
 
 const BaseUnemployedList = () => {
@@ -17,7 +13,6 @@ const BaseUnemployedList = () => {
     const unemployed = useSelector(getBaseUnemployed);
     const filter = useSelector(getFilter);
     const dispatch = useDispatch();
-
     useEffect(() => {
         localStorage.setItem('unemployed', JSON.stringify(unemployed));
     }, [unemployed])

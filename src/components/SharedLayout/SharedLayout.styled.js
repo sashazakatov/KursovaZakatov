@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-
 export const Header = styled.header`
     display: flex;
     justify-content: space-between;
@@ -17,7 +16,6 @@ export const Nav = styled.nav`
     display: flex;
     gap: 4px;
 `
-
 export const Link = styled(NavLink)`
     padding: 8px 16px;
     border-radius: 4px;
